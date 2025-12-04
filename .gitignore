@@ -1,0 +1,36 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor directories and files
+.idea/
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# Local development
+node_modules/
+.cache/
+dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local env files
+.env
+.env.local
+.env.*.local
+
+# Research & local files
+research.md
+RESEARCH.md
+
+# Claude Code
+.claude/

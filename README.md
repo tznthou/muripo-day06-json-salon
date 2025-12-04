@@ -2,34 +2,41 @@
 
 > [← 回到 Muripo HQ](https://tznthou.github.io/muripo-hq/)
 
-**TL;DR**: 貼上亂糟糟的 JSON，得到漂亮整齊的 JSON。特別適合編輯 MCP 設定檔！
-
-## Demo
-
-![JSON Salon Demo](assets/demo.png)
+貼上亂糟糟的 JSON，得到漂亮整齊的 JSON。特別適合編輯 MCP 設定檔！
 
 ## 功能
 
-- **即時美化**：貼上 JSON 立即看到美化結果
-- **Keys 排序**：自動按字母排序所有 keys，方便閱讀和比對
-- **語法檢查**：錯誤時告訴你哪一行出問題，還會猜測可能的原因
-- **一鍵複製**：複製美化後的結果，直接貼回設定檔
+- **即時美化** - 貼上 JSON 立即看到美化結果
+- **Keys 排序** - 自動按字母排序所有 keys
+- **語法檢查** - 錯誤時告訴你哪一行出問題
+- **一鍵複製** - 複製美化後的結果
 
-## 使用場景
+## 流程
 
-編輯 MCP 設定檔（`claude_desktop_config.json`）時：
+```mermaid
+flowchart LR
+    A[貼上 JSON] --> B{語法正確?}
+    B -->|是| C[美化 + 排序]
+    B -->|否| D[顯示錯誤位置]
+    C --> E[複製結果]
+    D --> A
+```
 
-1. 複製整個設定檔內容
-2. 貼到 JSON 美容院
-3. 確認格式正確、看看哪裡要改
-4. 複製美化結果貼回去
+## 快速開始
 
-從網路複製 JSON 片段時：
+```bash
+# 直接開啟
+open index.html
 
-1. 複製 JSON 片段
-2. 點「貼上剪貼簿」
-3. 確認語法正確
-4. 複製使用
+# 或使用靜態伺服器
+npx serve .
+```
+
+## 使用方式
+
+1. 貼上 JSON 到左側輸入框
+2. 右側自動顯示美化結果
+3. 點擊「複製結果」或按 `Cmd/Ctrl + Enter`
 
 ## 快捷鍵
 
@@ -40,31 +47,35 @@
 
 ## 選項
 
-- **排序 Keys**：開啟後會按字母順序排序所有物件的 keys
-- **縮排**：可選擇 2 spaces、4 spaces 或 Tab
+| 選項 | 說明 |
+|------|------|
+| 排序 Keys | 按字母順序排序所有物件的 keys |
+| 縮排 | 2 spaces / 4 spaces / Tab |
 
 ## 成就系統
 
 使用過程中可能解鎖：
 
-- 美容初體驗：第一次成功美化 JSON
-- JSON 巨獸馴服師：美化超過 5000 字元的 JSON
-- MCP 設定大師：美化包含 `mcpServers` 的設定檔
+| 成就 | 條件 |
+|------|------|
+| 美容初體驗 | 第一次成功美化 JSON |
+| JSON 巨獸馴服師 | 美化超過 5000 字元的 JSON |
+| MCP 設定大師 | 美化包含 `mcpServers` 的設定檔 |
 
-## 本地開發
+## 技術棧
 
-```bash
-# 直接用瀏覽器開啟
-open index.html
-
-# 或用任何靜態伺服器
-npx serve .
+```mermaid
+graph TD
+    A[HTML] --> D[JSON 美容院]
+    B[CSS] --> D
+    C[Vanilla JS] --> D
+    D --> E[純前端<br>零依賴]
 ```
+
+- 純原生 JavaScript，無框架依賴
+- Clipboard API 處理複製貼上
+- JSON.parse / JSON.stringify 處理美化
 
 ## License
 
-MIT
-
----
-
-**Muripo Day 06** - 讓您的 JSON 煥然一新 ✨
+[MIT](LICENSE)

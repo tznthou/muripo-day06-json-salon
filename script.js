@@ -285,10 +285,7 @@ async function handleCopy() {
       copyBtn.textContent = '複製結果';
     }, 2000);
   } catch (err) {
-    // Fallback
-    outputEl.select();
-    document.execCommand('copy');
-    showStatus('已複製！', 'success');
+    showStatus('複製失敗，請手動選取複製', 'error');
   }
 }
 
