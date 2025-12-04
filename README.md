@@ -1,6 +1,6 @@
 # JSON 美容院 | JSON Salon
 
-> [← 回到 Muripo HQ](https://tzuchieh.github.io/muripo-30days)
+> [← 回到 Muripo HQ](https://tznthou.github.io/muripo-30days)
 
 **TL;DR**: 貼上亂糟糟的 JSON，得到漂亮整齊的 JSON。特別適合編輯 MCP 設定檔！
 
