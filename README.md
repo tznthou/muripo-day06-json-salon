@@ -1,6 +1,6 @@
 # JSON 美容院 | JSON Salon
 
-> [← 回到 Muripo HQ](https://tznthou.github.io/muripo-hq/)
+> [← 回到 Muripo HQ](https://tznthou.github.io/muripo-hq/) | [English](README_EN.md)
 
 貼上亂糟糟的 JSON，得到漂亮整齊的 JSON。特別適合編輯 MCP 設定檔！
 
@@ -79,3 +79,9 @@ graph TD
 ## License
 
 [MIT](LICENSE)
+
+---
+
+## 作者
+
+子超 - [tznthou@gmail.com](mailto:tznthou@gmail.com)
